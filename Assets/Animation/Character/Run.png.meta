@@ -125,111 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile_0091(1)_0
+      name: Run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 57
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d707e677f9a9c9c60800000000000000
-      internalID: 7826300262157283453
+      spriteID: 6f0143f62567bec42bfab99fdf01df8f
+      internalID: 1787709643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0091(1)_1
+      name: Run_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 64
         y: 0
-        width: 58
-        height: 57
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 20f740e9b09ac1d90800000000000000
-      internalID: -7125634643046138110
+      spriteID: 095fec740fe6864448ee2e62ac3c5d89
+      internalID: 1717071262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0091(1)_2
+      name: Run_2
       rect:
         serializedVersion: 2
-        x: 127
+        x: 128
         y: 0
-        width: 58
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4571e852fb3c143b0800000000000000
-      internalID: -5529923641698019500
+      spriteID: 78facbe6072f1f54e9884b66cdd5f590
+      internalID: -1704452575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0091(1)_3
+      name: Run_3
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 0
-        width: 58
-        height: 57
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 847faaac78a4f6980800000000000000
-      internalID: -8543528021017299128
+      spriteID: 7afc5b795094bfd4b925a28bce2a15c9
+      internalID: -48845259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0091(1)_4
+      name: Run_4
       rect:
         serializedVersion: 2
-        x: 255
+        x: 256
         y: 0
-        width: 58
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91dbc5167d061ba20800000000000000
-      internalID: 3076346498638462233
+      spriteID: 567cb5da36466b248a0cae6fe7005d82
+      internalID: 2001139636
       vertices: []
       indices: 
       edges: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 85a47d7398400c542969ee351c020ef6
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tile_0091(1)_0: 7826300262157283453
-      tile_0091(1)_1: -7125634643046138110
-      tile_0091(1)_2: -5529923641698019500
-      tile_0091(1)_3: -8543528021017299128
-      tile_0091(1)_4: 3076346498638462233
+      Run_0: 1787709643
+      Run_1: 1717071262
+      Run_2: -1704452575
+      Run_3: -48845259
+      Run_4: 2001139636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
