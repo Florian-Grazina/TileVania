@@ -39,7 +39,11 @@ public class PlayerMovement : MonoBehaviour
 
     protected void FlipSprite()
     {
-        if(flipCoroutine != null)
+        bool playerHasHorizontalSpeed = Math.Abs(redRigidbody.linearVelocityX) > Mathf.Epsilon;
+        if(!playerHasHorizontalSpeed)
+            return;
+
+        if (flipCoroutine != null)
             StopCoroutine(flipCoroutine);
 
         float xScale = Mathf.Sign(redRigidbody.linearVelocityX);
