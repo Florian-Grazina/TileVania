@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] protected float moveSpeed = 5f;
+    [SerializeField] protected float jumpForce = 5f;
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
@@ -29,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
+
+    protected void OnJump(InputValue value)
+    {
+        if(value.isPressed)
+            Jump();
+    }
     #endregion
 
     #region movement methods
@@ -39,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
 
         bool playerHasHorizontalSpeed = Math.Abs(myRigidbody.linearVelocityX) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
+    }
+
+    protected void Jump()
+    {
+        myRigidbody.linearVelocityY += jumpForce;
     }
 
     protected void FlipSprite()
