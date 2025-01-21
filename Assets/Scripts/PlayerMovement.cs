@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
 
     private Vector2 moveInput;
-    private Rigidbody2D redRigidbody;
+    private Rigidbody2D myRigidbody;
     private Coroutine flipCoroutine;
+    private Animator myAnimator;
 
     protected void Start()
     {
-        redRigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     protected void Update()
@@ -26,27 +28,30 @@ public class PlayerMovement : MonoBehaviour
     protected void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
     #endregion
 
     #region movement methods
     protected void Run()
     {
-        Vector2 playerVelocity = new (moveInput.x * moveSpeed, redRigidbody.linearVelocityY);
-        redRigidbody.linearVelocity = playerVelocity;
+        Vector2 playerVelocity = new (moveInput.x * moveSpeed, myRigidbody.linearVelocityY);
+        myRigidbody.linearVelocity = playerVelocity;
+
+        bool playerHasHorizontalSpeed = Math.Abs(myRigidbody.linearVelocityX) > Mathf.Epsilon;
+        myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
     }
 
     protected void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Math.Abs(redRigidbody.linearVelocityX) > Mathf.Epsilon;
+        bool playerHasHorizontalSpeed = Math.Abs(myRigidbody.linearVelocityX) > Mathf.Epsilon;
+
         if(!playerHasHorizontalSpeed)
             return;
 
         if (flipCoroutine != null)
             StopCoroutine(flipCoroutine);
 
-        float xScale = Mathf.Sign(redRigidbody.linearVelocityX);
+        float xScale = Mathf.Sign(myRigidbody.linearVelocityX);
         flipCoroutine = StartCoroutine(SmoothFlip(xScale));
     }
 
