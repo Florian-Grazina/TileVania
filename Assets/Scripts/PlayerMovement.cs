@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
+    private CapsuleCollider2D myCapsuleCollider;
     private Coroutine flipCoroutine;
     private Animator myAnimator;
 
     protected void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         myAnimator = GetComponent<Animator>();
     }
 
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     protected void OnJump(InputValue value)
     {
-        if(value.isPressed)
+        if (value.isPressed && myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
             Jump();
     }
     #endregion
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     #region movement methods
     protected void Run()
     {
-        Vector2 playerVelocity = new (moveInput.x * moveSpeed, myRigidbody.linearVelocityY);
+        Vector2 playerVelocity = new(moveInput.x * moveSpeed, myRigidbody.linearVelocityY);
         myRigidbody.linearVelocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Math.Abs(myRigidbody.linearVelocityX) > Mathf.Epsilon;
@@ -57,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     {
         bool playerHasHorizontalSpeed = Math.Abs(myRigidbody.linearVelocityX) > Mathf.Epsilon;
 
-        if(!playerHasHorizontalSpeed)
+        if (!playerHasHorizontalSpeed)
             return;
 
         if (flipCoroutine != null)
@@ -70,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator SmoothFlip(float xScale)
     {
         Vector2 currentScale = transform.localScale;
-        Vector2 targetScale = new (xScale, currentScale.y);
+        Vector2 targetScale = new(xScale, currentScale.y);
 
         float progress = 0f;
         float duration = 1f;
