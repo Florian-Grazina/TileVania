@@ -37,7 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     protected void OnJump(InputValue value)
     {
-        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) return;
+        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
+           !myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
 
         if (value.isPressed)
             Jump();
@@ -65,6 +66,9 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 climbVelocity = new(myRigidbody.linearVelocityX, moveInput.y * climbSpeed);
         myRigidbody.linearVelocity = climbVelocity;
+
+        bool playerHasVerticalSpeed = Math.Abs(myRigidbody.linearVelocityX) > Mathf.Epsilon;
+        myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);
     }
 
     protected void FlipSprite()
