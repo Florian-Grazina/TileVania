@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed = 5f;
     [SerializeField] protected float jumpForce = 5f;
+    [SerializeField] protected float climbSpeed = 3f;
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     protected void Update()
     {
         Run();
+        Climb();
         FlipSprite();
     }
 
@@ -55,6 +57,14 @@ public class PlayerMovement : MonoBehaviour
     protected void Jump()
     {
         myRigidbody.linearVelocityY += jumpForce;
+    }
+
+    protected void Climb()
+    {
+        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
+
+        Vector2 playerVelocity = new(myRigidbody.linearVelocityX, moveInput.x * climbSpeed);
+        myRigidbody.linearVelocity = playerVelocity;
     }
 
     protected void FlipSprite()

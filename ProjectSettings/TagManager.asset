@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Trees
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Plateforms
     uniqueID: 3026661931
+    locked: 0
+  - name: Trees
+    uniqueID: 3913684283
     locked: 0
   - name: Player
     uniqueID: 449768767
