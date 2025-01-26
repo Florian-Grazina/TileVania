@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     protected void Update()
     {
         Run();
-        Climb();
+        ClimbTree();
         FlipSprite();
     }
 
@@ -59,12 +59,12 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.linearVelocityY += jumpForce;
     }
 
-    protected void Climb()
+    protected void ClimbTree()
     {
-        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
+        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
 
-        Vector2 playerVelocity = new(myRigidbody.linearVelocityX, moveInput.x * climbSpeed);
-        myRigidbody.linearVelocity = playerVelocity;
+        Vector2 climbVelocity = new(myRigidbody.linearVelocityX, moveInput.y * climbSpeed);
+        myRigidbody.linearVelocity = climbVelocity;
     }
 
     protected void FlipSprite()
