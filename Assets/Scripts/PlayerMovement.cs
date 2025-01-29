@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] protected float climbSpeed = 3f;
 
     private float defaultGravity;
+    private bool isClimbing = false;
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
@@ -65,20 +66,25 @@ public class PlayerMovement : MonoBehaviour
 
     protected void ClimbTree()
     {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees")))
+        if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees")) && Math.Abs(moveInput.y) > Mathf.Epsilon)
+            isClimbing = true;
+
+        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) isClimbing = false;
+        
+        if (!isClimbing) 
         {
             myRigidbody.gravityScale = defaultGravity;
             myAnimator.SetBool("isClimbing", false);
             return;
         }
 
+        myRigidbody.gravityScale = 0f;
+
         Vector2 climbVelocity = new(myRigidbody.linearVelocityX, moveInput.y * climbSpeed);
         myRigidbody.linearVelocity = climbVelocity;
 
         bool playerHasVerticalSpeed = Math.Abs(myRigidbody.linearVelocityY) > Mathf.Epsilon;
         myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);
-
-        myRigidbody.gravityScale = 0f;
     }
 
     protected void FlipSprite()
