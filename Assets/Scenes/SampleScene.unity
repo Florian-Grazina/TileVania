@@ -273,7 +273,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.8
+  orthographic size: 5.76
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -298,7 +298,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.789982, y: -8.180783, z: -10}
+  m_LocalPosition: {x: -19.790667, y: -9.05, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14326,18 +14326,34 @@ MonoBehaviour:
       CustomLookAtTarget: 0
   DefaultBlend:
     Style: 1
-    Time: 0.5
+    Time: 2
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  CustomBlends: {fileID: 0}
-  AnimatedTarget: {fileID: 0}
+  CustomBlends: {fileID: 11400000, guid: 9be33e502ad13dd4ab8ad43fabba1061, type: 2}
+  AnimatedTarget: {fileID: 2141225705}
   LayerIndex: 0
-  Instructions: []
-  HashOfParent: []
+  Instructions:
+  - FullHash: -397766897
+    Camera: {fileID: 1352666543}
+    ActivateAfter: 2
+    MinDuration: 0
+  - FullHash: 256545655
+    Camera: {fileID: 984302237}
+    ActivateAfter: 0
+    MinDuration: 0
+  HashOfParent:
+  - Hash: -397766897
+    HashOfParent: 756556552
+  - Hash: 256545655
+    HashOfParent: 756556552
+  - Hash: -725336713
+    HashOfParent: 756556552
+  - Hash: 2069122584
+    HashOfParent: 756556552
   m_LegacyLookAt: {fileID: 0}
   m_LegacyFollow: {fileID: 0}
 --- !u!1 &1296790943
@@ -23319,7 +23335,7 @@ GameObject:
   - component: {fileID: 1352666542}
   - component: {fileID: 1352666541}
   m_Layer: 0
-  m_Name: Idle Cmera
+  m_Name: Idle Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23334,7 +23350,7 @@ Transform:
   m_GameObject: {fileID: 1352666539}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.792593, y: -9.05, z: -10}
+  m_LocalPosition: {x: -19.790667, y: -9.05, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23413,7 +23429,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 6.8
+    OrthographicSize: 5.76
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -23467,6 +23483,11 @@ Transform:
 --- !u!4 &1858275287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4118414660289207704, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
+  m_PrefabInstance: {fileID: 5696951117758505992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2141225705 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6783469969468793941, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
   m_PrefabInstance: {fileID: 5696951117758505992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5696951117758505992
