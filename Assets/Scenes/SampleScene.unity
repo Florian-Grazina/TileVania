@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.54772, y: -9.218053, z: -10}
+  m_LocalPosition: {x: -22.548883, y: -7.824623, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14155,7 +14155,7 @@ GameObject:
   - component: {fileID: 970448569}
   - component: {fileID: 970448568}
   - component: {fileID: 970448567}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bouncing Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14259,7 +14259,7 @@ TilemapCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0eb76fff3c515c499599cd1e7ca83c5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -14283,7 +14283,7 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.23}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
@@ -14513,7 +14513,7 @@ Transform:
   m_GameObject: {fileID: 984302235}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.072592, y: -11.14, z: -10}
+  m_LocalPosition: {x: -28.982592, y: -7.83, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23641,7 +23641,7 @@ Transform:
   m_GameObject: {fileID: 1352666539}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.070665, y: -11.14, z: -10}
+  m_LocalPosition: {x: -28.980665, y: -7.83, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23799,11 +23799,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118414660289207704, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.06
+      value: -28.97
       objectReference: {fileID: 0}
     - target: {fileID: 4118414660289207704, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.14
+      value: -7.83
       objectReference: {fileID: 0}
     - target: {fileID: 4118414660289207704, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
       propertyPath: m_LocalPosition.z
