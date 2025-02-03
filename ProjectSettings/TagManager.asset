@@ -50,11 +50,11 @@ TagManager:
   - name: Trees
     uniqueID: 3913684283
     locked: 0
+  - name: Enemies
+    uniqueID: 1269566535
+    locked: 0
   - name: Player
     uniqueID: 449768767
-    locked: 0
-  - name: New Layer 5
-    uniqueID: 1269566535
     locked: 0
   m_RenderingLayers:
   - Default
