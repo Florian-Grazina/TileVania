@@ -14,14 +14,16 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
-    private CapsuleCollider2D myCapsuleCollider;
+    private CapsuleCollider2D myBodyCollider;
+    private BoxCollider2D myFeetCollider;
     private Coroutine flipCoroutine;
     private Animator myAnimator;
 
     protected void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-        myCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        myBodyCollider = GetComponent<CapsuleCollider2D>();
+        myFeetCollider = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
         defaultGravity = myRigidbody.gravityScale;
     }
@@ -41,8 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
     protected void OnJump(InputValue value)
     {
-        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
-           !myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
+        if(!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
+           !myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
 
         if (value.isPressed)
             Jump();
@@ -66,10 +68,10 @@ public class PlayerMovement : MonoBehaviour
 
     protected void ClimbTree()
     {
-        if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees")) && Math.Abs(moveInput.y) > Mathf.Epsilon)
+        if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees")) && Math.Abs(moveInput.y) > Mathf.Epsilon)
             isClimbing = true;
 
-        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) isClimbing = false;
+        if(!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) isClimbing = false;
         
         if (!isClimbing) 
         {
