@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,20 +32,27 @@ public class PlayerMovement : MonoBehaviour
 
     protected void Update()
     {
+        if (!isAlive) return;
+
         Run();
         ClimbTree();
         FlipSprite();
+        Die();
     }
 
     #region input system methods
     protected void OnMove(InputValue value)
     {
+        if (!isAlive) return;
+
         moveInput = value.Get<Vector2>();
     }
 
     protected void OnJump(InputValue value)
     {
-        if(!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
+        if (!isAlive) return;
+
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
            !myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
 
         if (value.isPressed)
@@ -121,12 +129,10 @@ public class PlayerMovement : MonoBehaviour
 
         transform.localScale = targetScale;
     }
-    #endregion
 
-    #region events
-    protected void OnCollisionEnter2D(Collision2D collision)
+    private void Die()
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
             isAlive = false;
     }
     #endregion
