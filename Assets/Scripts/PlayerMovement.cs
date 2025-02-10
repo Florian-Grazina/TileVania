@@ -2,17 +2,16 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed = 5f;
     [SerializeField] protected float jumpForce = 5f;
     [SerializeField] protected float climbSpeed = 3f;
+    [SerializeField] private bool isAlive = true;
 
     private float defaultGravity;
     private bool isClimbing = false;
-    private bool isAlive = true;
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
@@ -134,7 +133,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
-            myAnimator.SetBool("isDead", true);
+            myAnimator.SetTrigger("Dying");
+            myAnimator.SetBool("isRunning", false);
+            Jump();
             isAlive = false;
         }
     }
