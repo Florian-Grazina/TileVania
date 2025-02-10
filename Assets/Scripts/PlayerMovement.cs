@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float defaultGravity;
     private bool isClimbing = false;
+    private bool isAlive = true;
 
     private Vector2 moveInput;
     private Rigidbody2D myRigidbody;
@@ -119,6 +120,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.localScale = targetScale;
+    }
+    #endregion
+
+    #region events
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            isAlive = false;
     }
     #endregion
 }
