@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] protected float jumpForce = 5f;
     [SerializeField] protected float climbSpeed = 3f;
     [SerializeField] private bool isAlive = true;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform gun;
 
     private float defaultGravity;
     private bool isClimbing = false;
@@ -56,6 +58,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (value.isPressed)
             Jump();
+    }
+
+    protected void OnFire(InputValue value)
+    {
+        if (!isAlive) return;
+        Instantiate(bullet, gun.position, transform.rotation);
     }
     #endregion
 
