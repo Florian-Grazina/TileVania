@@ -17,7 +17,7 @@ TagManager:
   - Background
   - Bouncing
   - Enemy
-  - 
+  - Hazards
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Trees
     uniqueID: 3913684283
+    locked: 0
+  - name: Hazards
+    uniqueID: 1800488637
     locked: 0
   - name: Enemy
     uniqueID: 1269566535
