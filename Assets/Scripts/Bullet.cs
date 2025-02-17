@@ -2,17 +2,22 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float shootSpeed = 10f;
-    private Rigidbody2D myRigidBody;
+    [SerializeField] protected float shootSpeed = 10f;
+    private float xSpeed;
 
+    private Rigidbody2D myRigidBody;
+    private PlayerMovement player;
 
     protected void Start()
     {
-        myRigidBody = GetComponent<Rigidbody2D>();    
+        myRigidBody = GetComponent<Rigidbody2D>();
+        player = FindFirstObjectByType<PlayerMovement>();
+
+        xSpeed = player.transform.localScale.x < 0 ? -shootSpeed : shootSpeed;
     }
 
     protected void Update()
     {
-        myRigidBody.linearVelocity = new Vector2(shootSpeed, 0f);
+        myRigidBody.linearVelocity = new Vector2(xSpeed, 0f);
     }
 }
