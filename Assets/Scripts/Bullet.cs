@@ -20,4 +20,15 @@ public class Bullet : MonoBehaviour
     {
         myRigidBody.linearVelocity = new Vector2(xSpeed, 0f);
     }
+
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+            Destroy(collision.gameObject);
+    }
+
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }
