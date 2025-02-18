@@ -274,6 +274,7 @@ MonoBehaviour:
   isAlive: 1
   bullet: {fileID: 6072877869120572032, guid: 182b20c20ddf8564b95e8b8fee92591e, type: 3}
   gun: {fileID: 1362259934345762549}
+  kickDeath: {x: 8.14, y: 8.8}
 --- !u!1 &5511970895359289965
 GameObject:
   m_ObjectHideFlags: 0

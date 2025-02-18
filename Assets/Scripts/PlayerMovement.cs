@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isAlive = true;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform gun;
+    [SerializeField] protected Vector2 kickDeath;
 
     private float defaultGravity;
     private bool isClimbing = false;
@@ -143,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         {
             myAnimator.SetTrigger("Dying");
             myAnimator.SetBool("isRunning", false);
-            Jump();
+            myRigidbody.linearVelocity = kickDeath;
             isAlive = false;
         }
     }
