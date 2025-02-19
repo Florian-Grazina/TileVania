@@ -29689,6 +29689,7 @@ GameObject:
   - component: {fileID: 762483960}
   - component: {fileID: 762483959}
   - component: {fileID: 762483961}
+  - component: {fileID: 762483962}
   m_Layer: 14
   m_Name: Exit Tilemap
   m_TagString: Untagged
@@ -29915,6 +29916,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &762483962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762483957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9e1760d41557742b765d7f6be579f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelLoadDelay: 1
 --- !u!1 &960520765
 GameObject:
   m_ObjectHideFlags: 0
@@ -49564,11 +49578,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 667259414422560216, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.613586
+      value: -22.669617
       objectReference: {fileID: 0}
     - target: {fileID: 667259414422560216, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.037021
+      value: -24.156784
       objectReference: {fileID: 0}
     - target: {fileID: 1183470122344025363, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
       propertyPath: Target.TrackingTarget
@@ -49630,6 +49644,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3712778487677885729, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -28.942593
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712778487677885729, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087118277467167805, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -28.940666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087118277467167805, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.13
+      objectReference: {fileID: 0}
     - target: {fileID: 7296478111031783018, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -49661,7 +49691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118414660289207704, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.01
+      value: -24.13
       objectReference: {fileID: 0}
     - target: {fileID: 4118414660289207704, guid: 34d0844ba2d8a43479b6a988fcb6ea98, type: 3}
       propertyPath: m_LocalPosition.z
