@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
+    [SerializeField] private int playerLives = 3;
+
+    #region unity methods
     protected void Awake()
     {
         int numberOfGameSessions = FindObjectsByType<GameSession>(FindObjectsSortMode.None).Length;
@@ -10,9 +14,31 @@ public class GameSession : MonoBehaviour
         else
             DontDestroyOnLoad(gameObject);
     }
+    #endregion
 
-    protected void Update()
+    #region public methods
+    public void ProcessPlayerDeath()
     {
-        
+        if(playerLives > 1)
+            TakeLife();
+        else
+            ResetGameSession();
     }
+    #endregion
+
+    #region
+    private void TakeLife()
+    {
+        playerLives--;
+
+        int activeScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(activeScene);
+    }
+
+    private void ResetGameSession()
+    {
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
+    #endregion
 }
