@@ -14581,6 +14581,7 @@ GameObject:
   - component: {fileID: 971683728}
   - component: {fileID: 971683729}
   - component: {fileID: 971683730}
+  - component: {fileID: 971683731}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -14716,6 +14717,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &971683731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971683726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66379770f8c65443a04b967b8564b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296790943
 GameObject:
   m_ObjectHideFlags: 0
@@ -24341,7 +24354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667259414422560216, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.218054
+      value: -9.218055
       objectReference: {fileID: 0}
     - target: {fileID: 1183470122344025363, guid: b89ca39e4238c6046bffff0e65d07029, type: 3}
       propertyPath: Target.TrackingTarget
