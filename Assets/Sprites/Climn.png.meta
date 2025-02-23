@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b61db0c16ebf4341a6ab87205e57f12
+guid: 6ce57a27c55449c4b94b25799c809cd4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -558852649991698011
-    second: tile_0093_0
+      213: 1485261082948482287
+    second: tile_0091(2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile_0093_0
+      name: Climn_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,16 +126,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5a9857bc97e8e38f0800000000000000
-      internalID: -558852649991698011
+      spriteID: 97b421a9eff07834792156aa101dc626
+      internalID: 1163702249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0093_1
+      name: Climn_1
       rect:
         serializedVersion: 2
         x: 64
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52be3779145608c4d825b927a6e1b6e0
-      internalID: -629214301
+      spriteID: 4e7b2f7182e4e5e4cbf3284667f5d60e
+      internalID: 1642879750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0093_2
+      name: Climn_2
       rect:
         serializedVersion: 2
         x: 128
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f08872c9aab99942b015fcb978cbad9
-      internalID: -813129476
+      spriteID: 51ba8f86c4947314286ab5b4e1a3655c
+      internalID: 311185249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_0093_3
+      name: Climn_3
       rect:
         serializedVersion: 2
         x: 192
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ed290d8ebd9e6249bd23294a89235e8
-      internalID: -2010818542
+      spriteID: 3588f13bb831fc94ebd2779d1780581c
+      internalID: 1477515643
       vertices: []
       indices: 
       edges: []
@@ -204,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95c03c28c62a9a448aa11654af194f41
+    spriteID: b5ae5bc34f963d24f90306398e138a78
     internalID: 0
     vertices: []
     indices: 
@@ -214,10 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tile_0093_0: -558852649991698011
-      tile_0093_1: -629214301
-      tile_0093_2: -813129476
-      tile_0093_3: -2010818542
+      Climn_0: 1163702249
+      Climn_1: 1642879750
+      Climn_2: 311185249
+      Climn_3: 1477515643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
