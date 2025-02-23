@@ -146,6 +146,8 @@ public class PlayerMovement : MonoBehaviour
             myAnimator.SetBool("isRunning", false);
             myRigidbody.linearVelocity = kickDeath;
             isAlive = false;
+
+            FindFirstObjectByType<GameSession>().ProcessPlayerDeath();
         }
     }
     #endregion
