@@ -10,6 +10,7 @@ public class CoinPickUp : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             AudioSource.PlayClipAtPoint(coinPickUpSFX, Camera.main.transform.position);
+            FindFirstObjectByType<GameSession>().AddToScore(100);
             Destroy(gameObject);
         }
     }
