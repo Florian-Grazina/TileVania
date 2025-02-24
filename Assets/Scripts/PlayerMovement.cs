@@ -54,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isAlive) return;
 
-        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
-           !myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) return;
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) return;
 
         if (value.isPressed)
             Jump();
@@ -85,12 +85,12 @@ public class PlayerMovement : MonoBehaviour
 
     protected void ClimbTree()
     {
-        if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees")) && Math.Abs(moveInput.y) > Mathf.Epsilon)
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees")) && Math.Abs(moveInput.y) > Mathf.Epsilon)
             isClimbing = true;
 
-        if(!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) isClimbing = false;
-        
-        if (!isClimbing) 
+        if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Trees"))) isClimbing = false;
+
+        if (!isClimbing)
         {
             myRigidbody.gravityScale = defaultGravity;
             myAnimator.SetBool("isClimbing", false);
