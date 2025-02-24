@@ -60,11 +60,11 @@ TagManager:
   - name: Enemy
     uniqueID: 1269566535
     locked: 0
-  - name: Exit
-    uniqueID: 1101519905
-    locked: 0
   - name: Player
     uniqueID: 449768767
+    locked: 0
+  - name: Exit
+    uniqueID: 1101519905
     locked: 0
   m_RenderingLayers:
   - Default

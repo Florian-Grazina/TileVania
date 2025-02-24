@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
             Destroy(collision.gameObject);
     }
 
@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    protected void OnCollisionStay(Collision collision)
+    protected void OnCollisionStay2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
