@@ -19,6 +19,8 @@ public class Bullet : MonoBehaviour
     protected void Update()
     {
         myRigidBody.linearVelocity = new Vector2(xSpeed, 0f);
+        if (myRigidBody.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            Destroy(gameObject);
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +30,11 @@ public class Bullet : MonoBehaviour
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
+    protected void OnCollisionStay(Collision collision)
     {
         Destroy(gameObject);
     }
