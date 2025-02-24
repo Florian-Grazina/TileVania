@@ -7,7 +7,7 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] private int playerLives = 3;
     [SerializeField] private TextMeshProUGUI livesText;
-    private int score = 0;
+    [SerializeField] private int score = 0;
     [SerializeField] private TextMeshProUGUI scoreText;
 
 
@@ -36,6 +36,12 @@ public class GameSession : MonoBehaviour
         else
             ResetGameSession();
     }
+
+    public void AddToScore(int v)
+    {
+        score += v;
+        scoreText.text = score.ToString();
+    }
     #endregion
 
     #region
@@ -46,12 +52,6 @@ public class GameSession : MonoBehaviour
 
         int activeScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(activeScene);
-    }
-
-    internal void AddToScore(int v)
-    {
-        score += v;
-        scoreText.text = score.ToString();
     }
 
     private void ResetGameSession()
